@@ -5,27 +5,24 @@
 # Bậc 5: 301 - 400 kWh tiếp theo, giá 2.834 VND/kWh.
 # Bậc 6: Trên 400 kWh, giá 2.927 VND/kWh.
 
-sodientieuthu = float(input('Mời bạn nhập số điện đã tiêu thụ'))
+bac1 = 1678
+bac2 = 1734
+bac3 = 2014
+bac4 = 2536
+bac5 = 2834
+bac6 = 2927
 
-bac1=1.678
-bac2 =1.734
-bac3=2.014
-bac4=2.536
-bac5=2.834
-bac6=2.927
+sotientieuthu = float(input("Nhập số tiền tiêu thụ: "))
 
-if(sodientieuthu<=50):
-    sotienphaitra=sodientieuthu *bac1
-elif(sodientieuthu<=100):
-    sotienphaitra= 50*bac1 +(sodientieuthu-50)*bac2
-elif(sodientieuthu<=200):
-    sotienphaitra = 50*bac1 +50*bac2 + (sodientieuthu-100)*bac3
-elif(sodientieuthu<=300):
-    sotienphaitra= 50*bac1 + 50 *bac2 + 100*bac3 +(sodientieuthu-200)*bac4
-elif(sodientieuthu<=400):
-    sotienphaitra=50*bac1 +50*bac2+100*bac3 +100*bac4 +(sodientieuthu-300)*bac5
-elif(sodientieuthu>400):
-    sotienphaitra=50*bac1 +50*bac2+100*bac3 +100*bac4 +100*bac5 + (sodientieuthu-400)*bac6
-else:
-    print('Số điện không hợp lệ')
-print("Số tiền phải trả là : %2.f"%sotienphaitra)
+if sotientieuthu <= 50:
+    sotienphaitra = sotientieuthu * bac1
+elif sotientieuthu <= 100:
+    sotienphaitra = 50 * bac1 + (sotientieuthu-50)*bac2
+elif sotientieuthu <= 200:
+    sotienphaitra = 50 * bac1 + 50 * bac2 + (sotientieuthu-100)*bac3
+elif sotientieuthu <= 300:
+    sotienphaitra = 50 * bac1 + 50 * bac2 + 100 * bac3 + (sotientieuthu-100)*bac4
+elif sotientieuthu <= 400:
+    sotienphaitra = 50 * bac1 + 50 * bac2 + 100 * bac3 + 100 * bac4 + (sotientieuthu-200)*bac5
+
+print("Số tiền phải trả là: %2f"%sotienphaitra)
